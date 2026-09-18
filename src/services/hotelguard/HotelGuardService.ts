@@ -7,7 +7,7 @@
  * Comparison is based on evidence metadata only (counts, timestamps, areas, notes).
  * This is NOT automatic damage detection. All findings require user review.
  *
- * Phase 8 — TravelShield AI
+ * Phase 8 â€” TravelShield AI
  */
 
 import { HotelGuardSession, HotelComparison, HotelEvidence } from '@/types/travel';
@@ -91,7 +91,7 @@ export function generateHotelGuardReport(session: HotelGuardSession): string {
 
   const lines: string[] = [
     '==================================================',
-    'TRAVELSHIELD AI — HOTELGUARD EVIDENCE REPORT',
+    'TRAVELSHIELD AI â€” HOTELGUARD EVIDENCE REPORT',
     '==================================================',
     '',
     `Property:         ${session.propertyName}`,
@@ -141,9 +141,9 @@ export function generateHotelGuardReport(session: HotelGuardSession): string {
       `Check-In Areas:     ${cmp.checkInAreas.join(', ') || 'None specified'}`,
       `Check-Out Areas:    ${cmp.checkOutAreas.join(', ') || 'None specified'}`,
       cmp.missingAreas.length > 0
-        ? `POTENTIAL CHANGE — Areas in check-in not in check-out: ${cmp.missingAreas.join(', ')}`
+        ? `POTENTIAL CHANGE â€” Areas in check-in not in check-out: ${cmp.missingAreas.join(', ')}`
         : 'All check-in areas appear covered at check-out.',
-      `Reviewed by User:   ${cmp.reviewedByUser ? 'Yes' : 'No — REVIEW REQUIRED'}`,
+      `Reviewed by User:   ${cmp.reviewedByUser ? 'Yes' : 'No â€” REVIEW REQUIRED'}`,
       cmp.userNotes ? `\nUser Observations:\n${cmp.userNotes}` : '',
     ].filter(Boolean).join('\n')
     : 'No comparison performed yet.',

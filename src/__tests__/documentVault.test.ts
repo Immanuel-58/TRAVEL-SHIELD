@@ -1,5 +1,5 @@
 /**
- * Phase 7 — Document Vault Unit Tests
+ * Phase 7 â€” Document Vault Unit Tests
  * Tests LocalDocumentProcessor, storage key helper, and disclaimer constants.
  */
 
@@ -16,7 +16,7 @@ import type { DocumentPrivacyStatus, TripDocumentType } from '../types/travel';
 
 // -- Disclaimer constants ------------------------------------------------------
 
-describe('Phase 7 — Disclaimer constants', () => {
+describe('Phase 7 â€” Disclaimer constants', () => {
   it('SCANNER_DISCLAIMER is a non-empty string', () => {
     assert.strictEqual(typeof SCANNER_DISCLAIMER, 'string');
     assert.ok(SCANNER_DISCLAIMER.length > 20, 'SCANNER_DISCLAIMER should be descriptive');
@@ -30,7 +30,7 @@ describe('Phase 7 — Disclaimer constants', () => {
 
 // -- Storage key helper --------------------------------------------------------
 
-describe('Phase 7 — getStorageKey', () => {
+describe('Phase 7 â€” getStorageKey', () => {
   it('returns consistent key for a given doc ID', () => {
     const key = getStorageKey('doc_abc123');
     assert.strictEqual(key, 'travelshield_doc_doc_abc123');
@@ -45,7 +45,7 @@ describe('Phase 7 — getStorageKey', () => {
 
 // -- LocalDocumentProcessor ----------------------------------------------------
 
-describe('Phase 7 — LocalDocumentProcessor.scan()', () => {
+describe('Phase 7 â€” LocalDocumentProcessor.scan()', () => {
   const processor = new LocalDocumentProcessor();
 
   it('detects passport number pattern', () => {
@@ -91,7 +91,7 @@ describe('Phase 7 — LocalDocumentProcessor.scan()', () => {
 
 // -- DocumentPrivacyStatus type check -----------------------------------------
 
-describe('Phase 7 — DocumentPrivacyStatus valid values', () => {
+describe('Phase 7 â€” DocumentPrivacyStatus valid values', () => {
   it('all required privacy status values are valid string literals', () => {
     const validStatuses: DocumentPrivacyStatus[] = [
       'UNSCANNED',
@@ -110,7 +110,7 @@ describe('Phase 7 — DocumentPrivacyStatus valid values', () => {
 
 // -- TripDocumentType type check -----------------------------------------------
 
-describe('Phase 7 — TripDocumentType valid values', () => {
+describe('Phase 7 â€” TripDocumentType valid values', () => {
   it('all document types are valid string literals', () => {
     const validTypes: TripDocumentType[] = [
       'passport', 'visa', 'flight', 'hotel', 'insurance', 'identity', 'other',

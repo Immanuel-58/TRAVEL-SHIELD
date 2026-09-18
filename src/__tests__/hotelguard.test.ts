@@ -1,5 +1,5 @@
 /**
- * Phase 8 — HotelGuard Unit Tests
+ * Phase 8 â€” HotelGuard Unit Tests
  * Tests HotelGuardService: disclaimer, storage key helper,
  * comparison logic, report generation, and type values.
  */
@@ -16,7 +16,7 @@ import type { HotelGuardSessionStatus, HotelEvidenceType, HotelEvidence, HotelGu
 
 // -- Disclaimer ----------------------------------------------------------------
 
-describe('Phase 8 — HotelGuard: Disclaimer', () => {
+describe('Phase 8 â€” HotelGuard: Disclaimer', () => {
   it('HOTELGUARD_DISCLAIMER is a non-empty string with key limitation phrases', () => {
     assert.strictEqual(typeof HOTELGUARD_DISCLAIMER, 'string');
     assert.ok(HOTELGUARD_DISCLAIMER.length > 40, 'Disclaimer should be descriptive');
@@ -27,7 +27,7 @@ describe('Phase 8 — HotelGuard: Disclaimer', () => {
 
 // -- Storage key helper --------------------------------------------------------
 
-describe('Phase 8 — HotelGuard: generateEvidenceStorageKey', () => {
+describe('Phase 8 â€” HotelGuard: generateEvidenceStorageKey', () => {
   it('returns a consistent prefixed key for a given evidence ID', () => {
     const key = generateEvidenceStorageKey('ev_abc123');
     assert.strictEqual(key, 'travelshield_hotelguard_ev_abc123');
@@ -51,7 +51,7 @@ function makeEvidence(type: HotelEvidenceType, area: string, i: number): HotelEv
   };
 }
 
-describe('Phase 8 — HotelGuard: MetadataComparisonProvider', () => {
+describe('Phase 8 â€” HotelGuard: MetadataComparisonProvider', () => {
   const provider = new MetadataComparisonProvider();
 
   it('returns HIGH confidence when photo counts match and all areas covered', () => {
@@ -90,7 +90,7 @@ describe('Phase 8 — HotelGuard: MetadataComparisonProvider', () => {
 
 // -- Report generation ---------------------------------------------------------
 
-describe('Phase 8 — HotelGuard: generateHotelGuardReport', () => {
+describe('Phase 8 â€” HotelGuard: generateHotelGuardReport', () => {
   const now = new Date().toISOString();
   const session: HotelGuardSession = {
     id: 'sess_test',
@@ -132,7 +132,7 @@ describe('Phase 8 — HotelGuard: generateHotelGuardReport', () => {
 
 // -- Type value checks ---------------------------------------------------------
 
-describe('Phase 8 — HotelGuard: Type values', () => {
+describe('Phase 8 â€” HotelGuard: Type values', () => {
   it('all HotelGuardSessionStatus values are valid strings', () => {
     const statuses: HotelGuardSessionStatus[] = [
       'PENDING', 'CHECK_IN_RECORDED', 'CHECK_OUT_RECORDED',

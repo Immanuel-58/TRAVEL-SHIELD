@@ -55,7 +55,7 @@ export function AppHeader() {
                 TravelShield <span style={{ color: 'var(--color-accent)' }}>AI</span>
               </span>
               <span style={{ display: 'block', fontSize: '0.6rem', color: 'var(--color-text-muted)', fontWeight: 600, letterSpacing: '0.07em', textTransform: 'uppercase' }}>
-                Protect · Prove · Adapt
+                Protect Â· Prove Â· Adapt
               </span>
             </div>
           </Link>

@@ -481,7 +481,7 @@ export function OfflineSection({ tripId }: { tripId: string }) {
                         {item.actionType}
                       </div>
                       <div style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)' }}>
-                        {new Date(item.createdAt).toLocaleTimeString()} · retries: {item.retryCount}
+                        {new Date(item.createdAt).toLocaleTimeString()} Â· retries: {item.retryCount}
                       </div>
                     </div>
                     <Badge variant={item.status === 'synced' ? 'emerald' : item.status === 'pending' ? 'amber' : 'rose'}>
