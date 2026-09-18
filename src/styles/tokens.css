@@ -1,0 +1,98 @@
+﻿/**
+ * TravelShield AI � Centralized Design Tokens
+ *
+ * Edit this file to change the entire visual theme.
+ * All token names follow the --token-name convention.
+ * Components reference these via CSS variables.
+ *
+ * Phase 8 � Warm Editorial Design System
+ */
+
+:root {
+  /* -- Color Palette ------------------------------- */
+
+  --color-bg:           #faf8f5;
+  --color-surface:      #ffffff;
+  --color-surface-muted:#f4f0ea;
+  --color-surface-warm: #ede8df;
+
+  --color-text-primary:   #1c1410;
+  --color-text-secondary: #6b5c4e;
+  --color-text-muted:     #9c8878;
+
+  --color-accent:       #b5541a;
+  --color-accent-soft:  #f2e6db;
+  --color-accent-alt:   #1a6fb5;   /* secondary blue accent */
+
+  --color-border:       #e0d5c8;
+  --color-border-strong:#c8b8a8;
+
+  --color-success:      #2d6a4f;
+  --color-success-soft: #d8f0e6;
+  --color-warning:      #b87020;
+  --color-warning-soft: #fdf0d8;
+  --color-danger:       #a82020;
+  --color-danger-soft:  #fce8e8;
+  --color-info:         #1a6fb5;
+  --color-info-soft:    #ddeeff;
+
+  /* -- Typography ---------------------------------- */
+
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Size scale */
+  --text-display-xl:  3.5rem;    /* 56px */
+  --text-display-lg:  2.75rem;   /* 44px */
+  --text-display-md:  2rem;      /* 32px */
+  --text-heading-xl:  1.75rem;   /* 28px */
+  --text-heading-lg:  1.375rem;  /* 22px */
+  --text-heading-md:  1.125rem;  /* 18px */
+  --text-body-lg:     1.0625rem; /* 17px */
+  --text-body:        0.9375rem; /* 15px */
+  --text-body-sm:     0.8125rem; /* 13px */
+  --text-label:       0.75rem;   /* 12px */
+
+  /* Line heights */
+  --leading-display: 1.15;
+  --leading-heading: 1.3;
+  --leading-body:    1.65;
+  --leading-tight:   1.2;
+
+  /* Letter spacing */
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.02em;
+  --tracking-body:    0em;
+  --tracking-label:   0.04em;
+
+  /* -- Spacing ------------------------------------- */
+
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+
+  /* -- Shape --------------------------------------- */
+
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-pill: 9999px;
+
+  /* -- Shadows ------------------------------------- */
+
+  --shadow-sm:  0 1px 3px rgba(28, 20, 16, 0.08),
+                0 1px 2px rgba(28, 20, 16, 0.04);
+  --shadow-md:  0 4px 12px rgba(28, 20, 16, 0.10),
+                0 2px 4px  rgba(28, 20, 16, 0.06);
+  --shadow-lg:  0 16px 40px rgba(28, 20, 16, 0.12),
+                0 4px  8px  rgba(28, 20, 16, 0.06);
+
+  /* -- Transitions --------------------------------- */
+
+  --transition-fast:   0.15s ease;
+  --transition-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}

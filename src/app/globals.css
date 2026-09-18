@@ -1,0 +1,190 @@
+﻿/* TravelShield AI � Global Styles & Design System */
+/* Import centralized design tokens */
+@import '../styles/tokens.css';
+
+/* Google Fonts � editorial display + clean body */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- Backward-compatible variable aliases -----------------------------------
+   Existing components reference these names. They now resolve to warm values.
+   ---------------------------------------------------------------------------- */
+:root {
+  --bg-primary:    var(--color-bg);
+  --bg-secondary:  var(--color-surface-muted);
+  --bg-card:       var(--color-surface);
+  --bg-card-hover: var(--color-surface-muted);
+  --bg-glass:      rgba(255, 255, 255, 0.85);
+
+  --accent-cyan:          var(--color-accent-alt);
+  --accent-cyan-glow:     rgba(26, 111, 181, 0.15);
+  --accent-emerald:       var(--color-success);
+  --accent-emerald-glow:  rgba(45, 106, 79, 0.15);
+  --accent-amber:         var(--color-warning);
+  --accent-rose:          var(--color-danger);
+  --accent-indigo:        #5b3d8c;
+
+  --border-subtle:  var(--color-border);
+  --border-active:  var(--color-accent);
+
+  --text-primary:   var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted:     var(--color-text-muted);
+
+  --font-heading: var(--font-display);
+
+  --radius-sm:   var(--radius-sm);
+  --radius-md:   var(--radius-md);
+  --radius-lg:   var(--radius-lg);
+  --radius-full: var(--radius-pill);
+
+  --shadow-glow: 0 0 20px rgba(181, 84, 26, 0.12);
+  --shadow-card: var(--shadow-md);
+
+  --transition-fast:   var(--transition-fast);
+  --transition-smooth: var(--transition-smooth);
+}
+
+/* --- Reset ------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Base -------------------------------------------------------------------- */
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: var(--leading-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* --- Typography utilities ---------------------------------------------------- */
+.text-display-xl { font-size: var(--text-display-xl); font-family: var(--font-display); line-height: var(--leading-display); letter-spacing: var(--tracking-display); font-weight: 800; }
+.text-display-lg { font-size: var(--text-display-lg); font-family: var(--font-display); line-height: var(--leading-display); letter-spacing: var(--tracking-display); font-weight: 700; }
+.text-display-md { font-size: var(--text-display-md); font-family: var(--font-display); line-height: var(--leading-display); letter-spacing: var(--tracking-display); font-weight: 700; }
+.text-heading-xl  { font-size: var(--text-heading-xl);  font-family: var(--font-display); line-height: var(--leading-heading); font-weight: 700; }
+.text-heading-lg  { font-size: var(--text-heading-lg);  font-family: var(--font-display); line-height: var(--leading-heading); font-weight: 600; }
+.text-heading-md  { font-size: var(--text-heading-md);  font-family: var(--font-body);    line-height: var(--leading-heading); font-weight: 600; }
+.text-body-lg  { font-size: var(--text-body-lg); line-height: var(--leading-body); }
+.text-body     { font-size: var(--text-body);    line-height: var(--leading-body); }
+.text-body-sm  { font-size: var(--text-body-sm); line-height: var(--leading-body); }
+.text-label    { font-size: var(--text-label);   letter-spacing: var(--tracking-label); font-weight: 600; text-transform: uppercase; }
+
+/* --- Card / Surface utilities ------------------------------------------------ */
+.glass-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.glass-panel:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+}
+
+.card-muted {
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+/* --- Data Trust Badges ------------------------------------------------------- */
+.badge-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.badge-trust-live {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  border: 1px solid rgba(45, 106, 79, 0.25);
+}
+
+.badge-trust-cached {
+  background: var(--color-info-soft);
+  color: var(--color-info);
+  border: 1px solid rgba(26, 111, 181, 0.25);
+}
+
+.badge-trust-estimated {
+  background: var(--color-warning-soft);
+  color: var(--color-warning);
+  border: 1px solid rgba(184, 112, 32, 0.25);
+}
+
+.badge-trust-user_entered {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border: 1px solid rgba(181, 84, 26, 0.25);
+}
+
+.badge-trust-offline {
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+/* --- Focus visible ----------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- Scrollbar --------------------------------------------------------------- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-surface-muted); }
+::-webkit-scrollbar-thumb { background: var(--color-border-strong); border-radius: var(--radius-pill); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+/* --- Responsive helpers ------------------------------------------------------ */
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+}
+@media (min-width: 769px) {
+  .mobile-only { display: none !important; }
+}
